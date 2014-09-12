@@ -1,0 +1,124 @@
+##Hands-on: Programming 1
+####Philip Su & Tomas Vega
+
+---
+
+####Setting up the environment
+
+To set up the environment, create the following folders and files
+
+- programming1
+	- index.html
+	- assets
+		- css
+			- style.css 
+		- img
+			- philip.jpg (this can be any image)
+		- js
+
+---
+
+####HTML
+
+Open index.html and create the basic structure of an html file
+
+	<!DOCTYPE html> <!-- accesibility -->
+	<html>
+	<head>
+	</head>
+	<body>
+	</body>
+	</html>
+	
+---
+
+Now, inside head, you want to set the title of the page
+
+	<head>
+		<title>Silky-smooth</title>
+	</head>
+
+Inside body, you want to create a title
+	
+	<h1>This is music: SAX</h1>
+
+a sub-title
+
+	<h2>Vvvvvery sexy!</h2>
+
+add an image
+
+	<img src="assets/img/philip.jpg"/>
+
+and a paragraph element
+
+	<p>Real men play sax - Philippo Su</p>
+	
+your html file should look like this
+
+	<!DOCTYPE html> <!-- accesibility -->
+	<html>
+	<head>
+		<title>Silky-smooth</title>
+	</head>
+	<body>
+		<h1>Silky-smooth</h1>
+		<h2>Vvvvvery sexy!</h2>
+		<img src="assets/img/philip.jpg"/>
+		<p>Real men play the sax - Philippo Su</p>
+	</body>
+	</html>
+	
+---
+
+####CSS
+
+Open style.css
+
+	img {
+	    height: 400px;
+	    border: 2px solid white;
+	    border-radius: 25px;
+	}
+	body {
+	    background: black;
+	    color: white;
+	    text-align: center;
+	}
+	
+And don't forget to link the css file in the head of index.html!
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+
+---
+
+####Final code
+
+#####HTML
+
+	<!DOCTYPE html> <!-- accesibility -->
+	<html>
+	<head>
+		<title>Silky-smooth</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+	</head>
+	<body>
+		<h1>This is music: SAX</h1>
+		<h2>Vvvvvery sexy!</h2>
+		<img src="assets/img/philip.jpg"/>
+		<p>Real men play sax - Philippo Su</p>
+	</body>
+	</html>
+
+#####CSS
+
+	img {
+    	height: 400px;
+	    border: 2px solid white;
+	    border-radius: 25px;
+	}
+	body {
+	    background: black;
+	    color: white;
+	    text-align: center;
+	}

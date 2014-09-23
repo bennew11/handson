@@ -1,0 +1,25 @@
+body {
+    font-family: ubuntu;
+    background: #1E373E;
+    color: white;
+}
+
+#title {
+    font-size: 5em;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+#container {
+	height: 550px;
+    margin: 0px auto;
+}
+
+.image {
+	width: 200px;
+	height: 200px;
+	border-radius: 25px;
+	border: 5px solid white;
+    float: left;
+    margin: 0px 20px 20px 0px;
+}

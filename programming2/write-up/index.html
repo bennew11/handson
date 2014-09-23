@@ -1,0 +1,79 @@
+<html> 
+<head>
+    <title>WDD | Hands-on 2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="images/logo.png" /></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Hands-on 3</div>
+				<!-- DUE DATE -->
+				<div id="header-due">September 23rd</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">Using selectors</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Google Chrome &amp; Code Editor</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">For this hands-on, you'll practice using class and id to select elements from the HTML DOM</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Setting up the environment</div>
+				<!-- CONTENT -->
+				
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for images -->
+				<p>Download the hands-on zip folder into your computer and decompress it. Now open start.html in sublime.</p>
+
+				<div class = "body-header">Classes</div>
+				<p>As you can see in the HTML code, the six images share the same class.</p>
+				<img src="img/1.png"/>
+				<p>We only need one css style to define the appereance for all elements of the same class</p>
+				<img src="img/2.png"/>
+				<p>Lets try to fit only 3 photos per row. To do this, we first need to set the margin-right of each 3rd element to 0. We are going to use the nth-child selector</p>
+				<img src="img/3.png"/>
+				<p>And now lets uce calc to set the width to the summation of the three images plus 2*20px of padding.</p>
+				<img src="img/4.png"/>
+				<p>We also want to eliminate the bottom margin for the third last elements. To do this, we use the nth-last-child selector. We can have multiple selectors with the same attributes.</p>
+				<img src="img/8.png"/>
+                <div class = "body-header">IDs</div>
+				<p>Using the id selector we can specify the appereance of each photo individually. Lets proceed and assign a unique id for each image. <b>Note:</b> You can only use an id for one element or it won't work.</p>
+				<img src="img/5.png"/>
+				<p>Create a new class in your css file for each id. Now set the border-color of each image to a different color.</p>
+                <div class="two-images">
+                    <img src="img/6.png"/>
+                </div>
+                <div class="two-images">
+                    <img src="img/7.png"/>
+                </div>
+                <p>You will get something like this:</p>
+                <img src="img/9.png"/>
+				<p>To end, we are going to use the :hover selector which enable us to define an appereance for when the user hovers on the selected element.</p>
+                <div class="two-images">
+                    <img src="img/10.png"/>
+                </div>
+                <div class="two-images">
+                    <img src="img/11.png"/>
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

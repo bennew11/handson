@@ -1,0 +1,116 @@
+<html> 
+<head>
+    <title>WDD | Hands-on 2</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/images/logo.png" /></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Hands-on 5</div>
+				<!-- DUE DATE -->
+				<div id="header-due">October 7th</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">CSS Positioning & Floats</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Google Chrome, Internet, text editor, a cute picture (if you don't want to use ours).</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">For this hands-on, you will be making a Medium like page for a blog post to practice positioning.</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+				
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for assets/images -->
+				<p></p>
+				<img src="assets/images/first.png" />
+				<p>You want your blog post to have a giant image like on Medium and also some text for where you voiced your inner most feelings. On top, there are some words that are supposed to be located at the top bar and a few lines of text, the titles, that are supposed to overlay ontop the big image. But, right now it looks like this. Let's style it so it looks way better!</p>
+				<div class = "body-header">1. Style the Top</div>
+				<p>If you look at the page now, the cat picture is gigantic and the navgiation bar needs work. To make sure the cat image is stretched across the top of the page but not too big, let's set <b>.blog-image </b>width to 100%. 
+				
+				<p>Great! The cat looks nice (and cute), but to make navigation easier for the user, let's make it a side bar that sticks to the side of the page. Give <b>navbar</b> position: fixed to fix it to the left. Now your "sidebar" is a small rectangle on the top. To make it stretch down the side, make the width 200px and height 100% under navbar too. Then to make the text go down the sidebar instead of across change display to block.<br><br>
+				<img src="assets/images/second.png" /><br>
+				</p>
+				<div class = "body-header">2. Style the Titles</div>
+				<p>Underneath the navigation bar, notice there are some text there. That is actually the title and subtitle. However, we don't want it underneath the bar, we want it ontop our image so we can actually see it. In the CSS class <b>.blog-title</b> we can margins to move our text around and using font-weight, color, and size to modify the text appearance:</p>
+				<div class = "listofcode">
+				    <ul>font-weight: 700;</ul>
+				    <ul> font-size: 50px;</ul>
+				    <ul> color: white;</ul>
+				    <ul> position: absolute;</ul>
+				    <ul> margin-top: 300px;</ul>
+				    <ul> margin-left: 300px;</ul>
+				 </div>
+
+				 <p>Let's do the same thing to the subtitle as well under <b>.blog-timestamp</b></p>
+				 <div class = "listofcode">
+				    <ul>font-style: italic;</ul>
+				    <ul>position: absolute;</ul>
+				    <ul>color: white;</ul>
+				    <ul>margin-top: 370px;</ul>
+				    <ul>margin-left: 300px;</ul>
+    			</div>
+    			<img src="assets/images/third.png" /><br><br>
+				<div class = "body-header">Step 3: Style the Body Text</div>
+				<p>Great! Now, let's make that ugly chunk of words on the bottom a bit nicer. First, let's make the text actually readable. To do this, apply line height and a margin to separate it from the image on top to <b>.blog-lorem</b> in the css.</p>
+				 <div class = "listofcode">
+				    <ul>line-height: 1.5em;</ul>
+				    <ul>font-weight: 300;</ul>
+				    <ul>margin: 10px 0;</ul>
+    			</div>
+
+    			<p>Now even though the text is legible, it stretches across the entire page which we don't want. If you are familiar with Medium, the site keeps the main blog content in the center of the page with ample space on the sides. All you have to do is to apply a margin and width to <b>.blog-text</b>:
+    			<div id = "listofcode ">
+    			 <ul>width: 720px;</ul>
+   				 <ul>margin: 40px auto;</ul>
+    			</div><br>
+    			 <img src="assets/images/last.png" /><br><br>
+
+			</div>
+			<div class = "body-header">Bonus: Style the Button</div>
+				<p>Great! Your blog is beautiful now. But, if you noticed at the very bottom, there is a "Share!" text. That is what is supposed to be a button for you to share your lovely post with your friends. Using your knowledge from the previous weeks, apply some style to it to make it pretty. This is what we did: </p>
+
+				<div class = "listofcode">
+				button {
+				   <ul> background: black;</ul>
+				    <ul>color: white;</ul>
+				    <ul>width: 100px;</ul>
+				    <ul>text-align: center;</ul>
+				    <ul>padding: 7px;</ul>
+				    <ul>border-radius: 2px;</ul>
+				    <ul>cursor: pointer;</ul>
+				}
+				.button-share {
+				    <ul>background: #6392c0;</ul>
+				    <ul>border: 1px solid black;</ul>
+				    <ul>-webkit-transition: 0.5s;</ul>
+				    <ul>margin-top: 20px;</ul>
+				}
+				.button-share:hover {
+				    <ul>background: rgba(99, 146, 192, 0.7);</ul>
+				}
+
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

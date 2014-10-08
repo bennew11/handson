@@ -1,0 +1,62 @@
+body {
+    font-family: "Open sans", Helvetica, sans-serif;
+    margin: 0;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.46);
+  padding: 15px;
+
+}
+
+.navbar-item {
+    font-weight: 300;
+    margin-bottom: 20px;
+    
+}
+
+a.navbar-item {
+    color: white;
+    text-decoration: none; 
+}
+
+.blog-image {
+}
+
+
+.blog-title { 
+
+}
+
+.blog-timestamp { 
+
+}
+
+.blog-lorem { 
+
+}
+
+.blog-text {
+
+}
+
+/* SAMPLE BUTTON CSS, YOU STYLE YOUR OWN!
+button {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.button-share {
+    background: #6392c0;
+    border: 1px solid black;
+    -webkit-transition: 0.5s;
+    margin-top: 20px;
+    width: 100px;
+    text-align: center;
+}
+.button-share:hover {
+    background: rgba(99, 146, 192, 0.7);
+}*/

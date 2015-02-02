@@ -1,0 +1,97 @@
+/* GLOBAL */
+
+html {
+width: 100%;
+height: 100%;
+}
+
+body {	/*the outer layer of the site and global style attributes*/
+background-color:#F2F2F2;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+margin: 0px;
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+}
+
+.img-scaled {
+width: 100%;
+}
+.img-scaled-wh {
+width: 100%;
+height: 100%;
+}
+.clear {
+clear: both;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+#viewport {
+    width: 100%;
+    height: 100%;
+}
+#page-slider {
+    height: 100%;
+}
+#page-1 {
+    background: #de6868;
+}
+.page-content {
+    text-align: center;
+    position: absolute;
+}
+.page-icon {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    width: 100%;
+}
+.page-icon img {
+    display: block;
+    margin: 0px auto;
+}
+#page-2 {
+    background: #1abc9c;
+}
+#page-3 {
+    background: #5a4fcf;
+}
+#page-4 {
+    background: #3498db;
+}
+#page-5 {
+    background: #4a4a4a;
+}
+
+/* slider container */
+.iosSliderVertical {
+	/* required */
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+    height: 100%;
+}
+
+/* slider */
+.iosSliderVertical .slider {
+	/* required */
+	width: 100%;
+	height: 100%;
+}
+
+/* slide */
+.iosSliderVertical .slider .slide {
+	/* required */
+	float: left;
+	width: 100%;
+    height: 100%;
+}

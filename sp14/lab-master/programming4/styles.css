@@ -1,0 +1,85 @@
+body {
+	background-color: #fbfbfb;
+	color: #333;
+	font-family: Arial, Verdana, sans-serif;
+	margin: 0; /* Set to 0, since browsers may give different defaults for body */
+	padding: 0;
+}
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+#post-header {
+	border-bottom: 1px solid #ddd;
+	color: #666;
+	font-size: 21px;
+	padding-bottom: 25px;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.post {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-top: 3px solid #7851a9; /* Overrides above style */
+	border-radius: 3px;
+	min-height: 200px; /* You can set min and max heights */
+	margin: 30px auto;
+	padding: 30px;
+	text-align: center;
+	width: 600px;
+}
+.title {
+	border-bottom: 1px solid #ddd;
+	font-size: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.body {
+	color: #666;
+	line-height: 32px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.circle {
+	background-color: #7851a9;
+	border: 1px solid #5a3c7e;
+	border-radius: 50%;
+	height: 100px;
+	margin: 0 auto 30px;
+	width: 100px;
+}
+.gap60 {
+	height: 60px;
+}
+.gap120 {
+	height: 120px;
+}
+#footer {
+	background-color: #333;
+	color: white;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+/* EDIT BELOW */
+#menu-container { 
+	/* Add below */
+}
+#menu {
+	/* Add below */
+}
+.menu-item {
+	/* Add below */
+}
+.date {
+	color: #888;
+	font-size: 13px;
+	/* Add below */ 
+}
+.post {
+	/* Add below (this will add other styles to our existing .post styles above) */
+}

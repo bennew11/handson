@@ -1,0 +1,66 @@
+html {
+width: 100%;
+height: 100%;
+}
+
+body {  /*the outer layer of the site and global style attributes*/
+width: 100%;
+font-family: "Lato", "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+margin: 0px;
+background: #f7f5f2;
+padding: 90px 30px;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+i {
+	display: none;
+}
+
+.clear {
+clear: both;
+}
+
+.img-scaled {
+width: 100%;
+}
+
+.img-scaled-wh {
+width: 100%;
+height: 100%;
+}
+
+.img-scaled-h {
+height: 100%;
+}
+
+.button {
+	float: left;
+}
+
+#title {
+    font-size: 36px;
+    font-weight: 300;
+}
+#info {
+    font-size: 16px;
+    color: #757c78;
+    font-style: italic;
+}
+#cover {
+    border-radius: 5px;
+    overflow: hidden;
+}
+h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+#content {
+    padding: 10px 0px;
+}
+p {
+    font-size: 16px;
+}

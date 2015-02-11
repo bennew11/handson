@@ -40,11 +40,30 @@ a {
     position: relative;
     padding: 30px 0px;
 }
+#header-back {
+    background: #78c272;
+    display: inline-block;
+    height: 43px;
+    margin-right: -2px;
+    padding: 15px;
+    width: 20px;
+}
 #header {
     background: #78c272;
+    display: inline-block;
     padding: 15px;
     color: white;
     width: 270px;
+}
+#header-img {
+    opacity: .8;
+    position: absolute;
+    top: 55px;
+    transition: 0.2s;
+    width: 20px;
+}
+#header-img:hover {
+    opacity: 1;
 }
 #header-caption-logo {
     width: 20px;

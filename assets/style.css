@@ -116,9 +116,9 @@ a {
 .body img {
 	width: 100%;
 }
-.body a {
+/*.body a {
 	color: #78c272;
-}
+}*/
 .body li {
     line-height: 24px;
 }
@@ -134,4 +134,12 @@ a {
 #submission-content p, #submission-content li {
     line-height: 24px;
     opacity: 0.75;
+}
+
+.program {
+    color: #6392c0;
+}
+
+.design {
+    color: #78c272;
 }

@@ -1,0 +1,32 @@
+body {
+	font-family: Arial;
+}
+
+.container {
+	background: #eee;
+	margin: auto;
+	padding: 30px;
+	text-align: center;
+	width: 700px;
+}
+
+.button {
+	background: #517fa4;
+	color: white;
+	margin: 20px auto;
+	padding: 10px 15px;
+	width: 200px;
+}
+
+.image-container {
+	border: 5px solid white;
+	display: inline-block;
+	margin: 10px;
+}
+
+img {
+	height: 200px;
+	width: 200px;
+
+	object-fit: cover;
+}

@@ -32,7 +32,7 @@
 					<!-- REQUIRED TOOLS -->
 					<div class="info-required">Required Tools: Google Chrome and a text editor</div>
 					<!-- INTRODUCTION -->
-					<div class="info-intro">In the spirit of Valentine's Day, you will be building a very basic webpage with HTML, CSS and images.</div>
+					<div class="info-intro">Today, we'll be learning how to place, position, and space HTML elements. We'll explore different CSS styles, such as margin, padding, border, and position. You'll create a photo gallery similar to Instagram, but better: Canadagram.</div>
 				</div>
 			</div>
 			<div class="body">
@@ -44,36 +44,77 @@
 				<!-- Use UL LI Tags for each lists -->
 				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
 				<!-- Use IMG Tags for assets/images -->
-				<p>Time to put the HTML you learned to use! For this hands-on, we will be making a simple registration page for a dating site.</p>
-				<img src="assets/images/handson.jpg">
-				<p>At the end of this hands-on, you should have something like the page above.</p>
-				<div class = "body-header">Step 1: Set Up HTML</div>
-				<p>Every HTML file should have the following basic structure:
-				<br>
+				<p>At the end of this hands-on, you should have something like the page below.</p>
+				<img src="assets/images/handson.png">
+				<div class = "body-header"><br>Step 1: Set Up HTML</div>
+				<p>We're going to write all the HTML elements with classes first, then style. Let's begin by making a "container" div inside &lt;body&gt;. Make sure you put all the other HTML tags inside this container. You'll see later on why we do this, but in a nutshell, container divs make it easy to move large blocks of HTML around the page.</p>
 					<b>
-					&lt;!DOCTYPE html&gt;
-					<br>
-					&lt;html&gt;
-					<br>
-					&lt;head&gt;
-					<br>
-					&lt;/head&gt;
-					<br>
 					&lt;body&gt;
 					<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="container"&gt;
+						<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+						<br>
 					&lt;/body&gt;
 					<br>
-					&lt;/html&gt;
 					</b>
 				<br>
 				</p>
-				<div class = "body-header">Step 2: Add Content</div>
-				<p>Start making your registration page by giving it a heading.  Then, using <b>&lt;input&gt;</b> and <b>&lt;select&gt;</b> tags, provide the user with space to <em>type</em> their first name, and <em>choose</em> their gender, their gender preference, and their country using a dropdown menu.  Put these options in a cohesive sentence like in the example page above.  Lastly, make a "Submit" button using the <b>&lt;button&gt;</b> tag.</p>
-				<div class = "body-header">Step 3: Image and Style</div>
-				<p>Add an image before your text to spice this page up.
-				<br>If you refresh your page, you'll likely see that your image is HUGE.  Fix this by adding some CSS.<br>Create a new file and call it "style.css". Link to this file in your html using:<br><br><b>&lt;link rel="stylesheet" type="text/css" href="(path to style.css file)"&gt;</b><br><br>Put this inside the <b>&lt;head&gt;</b> tag of your HTML file.  <br>Then, select the image and change its height to be around 300px.
+				<p>Our website needs a title, description, and sign-up button! Using <b>&lt;h1&gt;</b> and <b>&lt;h4&gt;</b>, give your site a name and description. Also, make another div with the class "button". We'll style this later to look like a button. </p>
+				<p>Your HTML should look something like this:</p>
+				<img src="assets/images/example1.png">
+
+				<p>Next, let's create the HTML for the images. We'll make one image for now, then just copy and paste the code after we finalize the design.</p>
+
+				<p>Create a <b>&lt;div&gt;</b> with class "image-container", and inside "image-container", create an image tag. It's good practice to put your <b>&lt;img&gt;</b> inside <b>&lt;div&gt;</b>. Use any image you like.</p>
+
+				<p>Updated code screenshot!</p>
+				<img src="assets/images/example2.png">
+
+				<div class = "body-header"><br>Step 2: Make it Pretty</div>
 				<br>
-				</p>
+				<img src="assets/images/screenshot2.png">
+				<p>Canadagram looks a bit ugly now - but don't worry! With a bit of CSS, we can easily make it pretty.</p>
+				<p>Give your entire website a font facelift by using targeting body in your CSS. Additionally, let's style .container accordingly:</p>
+				.container {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: #eee;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 700px;
+				<br>}
+
+				<p>Refresh the page and you'll see a gray box with the title centered. The photo is still too big, so let's fix that. We can select all <b>&lt;img&gt;</b> tags and style:</p>
+				img {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 200px;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 200px;
+				<br>}
+
+				<p>Oh no - The images are distorted! That's because you're manually setting the width <em>and</em> the height of the image. The image will be resized to fit your dimensions, causing it to warp. Usually, you'll only want to set either the height <em>or</em> the width - not both. But in this case, we want our images to be square. How can we fix that? <b>Use this nifty style: object-fit: cover</b></p>
+				img {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 200px;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 200px;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;object-fit: cover;
+				<br>}
+
+				<p>You can read more about this nifty trick <a href="https://medium.com/@chrisnager/center-and-crop-images-with-a-single-line-of-css-ad140d5b4a87">here</a>. Basically, object-fit: cover centers the photo within the 200 by 200px square, and <em>automatically crops</em> any part of the image that falls outside of the square - without distortion.</p> 
+
+				<div class = "body-header"><br>Step 3: Positioning and Spacing</div>
+				<p>Let's copy and paste the .image-container divs to add a few more photos on the page. These are <b>&lt;div&gt;</b> tags, so recall that they stack <em>vertically</em>.</p>
+				<br><img src="assets/images/screenshot3.png">
+				<p>Fix this by adding <b>display: inline-block</b> to <b>.image-container</b>. The images are pretty close together, so let's give them some margin. Add <b>margin: 10px</b> to <b>.image-container</b>. This adds a 10px margin to every side of each <b>&lt;div&gt;</b> with the tag .image-container. Finally, add <b>border: 5px solid white</b>.</p>
+				<p>Notice that the edge of the gray box is very close to the text and images. Instead of fiddling with the width and possibly messing up the layout, let's just use <b>padding</b> to "push" the edge of the box out. Add <b>padding: 30px</b> to <b>.container</b>. This adds 30px of space along the inner edge of your gray .container.</p>
+
+				<div class = "body-header"><br>Step 4: Final Touches</div>
+				<p>Your website looks pretty nice! (I hope). However, the content isn't centered. To fix that, add <b>margin: auto</b> to <b>.container</b>. Now you see why we put everything inside <b>.container</b> - it makes it easy to move all the elements, including centering them!</p>
+				<p>Finally, let's make the button pretty. Add the following styling to <b>.button</b>:</p>
+				.button {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: #517fa4;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: white;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: 20px auto;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px 15px;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 200px;
+				<br>}
+				<p>Play around in web inspector to see what each one of these styles do, and try making your own button.</p>
+
 			</div>
 		</div>
 	</div>

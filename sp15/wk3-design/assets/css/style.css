@@ -1,0 +1,99 @@
+/* 
+You don't need to worry about the css attributes below.
+*/
+body, html {
+	margin: 0;
+	font-family: Lato;
+	background-color: #ededed;
+	-webkit-font-smoothing: antialiased;
+}
+.img_scaled_wh {
+	width: 100%;
+	height: 276px;
+	display: block;
+}
+.clear {
+	clear: both;
+}
+p {
+	margin: 0;
+}
+h4, h1 {
+	margin: 0;
+	color: #1a1a1a;
+	font-weight: 300;
+}
+input {
+	float: left;
+}
+ul {
+	list-style: none;
+	margin: 0;
+}
+li {
+	float: right;
+}
+#navbar {
+	background-color: #fff;
+	color: #505959;
+	font-size: 16px;
+	letter-spacing: .025em;
+	font-weight: 400;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+#search_bar {
+	height: 35px;
+	width: 300px;
+	opacity: 0.3;
+	background-color: #505959;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 25px;
+	float: left;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+}
+
+/* 
+You DO need to worry about the css attributes below.
+*/
+
+#container {
+	width: 980px;
+	margin: 0 auto;
+}
+
+#navbar_items li {
+}
+
+.blog_text_container {
+}
+
+#page_header {
+	font-size: 46px;
+	text-align: center;
+}
+.blog_container {
+	width: 460px;
+	box-sizing: border-box;
+	float: left;
+	background-color: white;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.blog_header {
+	color: #1a1a1a;
+	font-weight: 400;
+	font-size: 30px;
+}
+.blog_subtitle {
+	color: #949799;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: .025em;
+}
+.blog_paragraph {
+	font-size: 16px;
+	font-weight: 400;
+	color: #666;
+}

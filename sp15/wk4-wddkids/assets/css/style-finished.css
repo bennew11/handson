@@ -1,0 +1,121 @@
+/**** DOCUMENT SET-UP ****/
+
+body, html {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	font-size: 1em;
+	display: block;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.img-scaled {
+	width: 100%;
+}
+
+.img-scaled-wh {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.clear {
+	clear: both;
+}
+
+#title-logo {
+	width: 48px;
+	margin-top: 2px;
+	margin-right: 6px;
+}
+
+#container {
+	position: absolute;
+	top: calc(50% - 270px);
+}
+
+/* STEP 1: IMPORTING GOOGLE FONTS */
+
+#container {
+    font-family: 'Lato';
+    padding: 60px;
+    color: #4a4a4a;
+}
+
+/* STEP 2: TYPOGRAPHY I */
+
+#heading {
+    font-size: 48px;
+    font-weight: 300;
+    margin: 24px 0px;
+}
+
+#description {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 24px;
+    opacity: 0.72;
+}
+
+#title-caption {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#action {
+    background: #78c272;
+    color: white;
+    padding: 16px 64px;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* STEP 3: IMAGERY */
+
+#background {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#container {
+	color: white;
+}
+
+#title-logo {
+	float: left;
+}
+
+#title-caption {
+	float: left;
+}
+
+/* STEP 3: TYPOGRAPHY II */
+
+#heading {
+	font-size: 96px;
+	font-family: 'Amatic SC';
+}
+
+/*
+BONUS: What do you think of the design when you...
+1. Make the text center justified?
+2. Get rid of the WDD | Kids Title?
+3. Change the font to a different one (Try "Crafty Girls")
+	
+#title {
+	display: none;
+}
+
+#container {
+	text-align: center;
+	width: calc(100% - 120px);
+}
+*/

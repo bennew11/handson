@@ -1,0 +1,83 @@
+<html> 
+<head>
+    <title>WDD | Hands-on 5</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/images/logo.png" /></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Hands-on 5</div>
+				<!-- DUE DATE -->
+				<div id="header-due">March 3rd</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">Positioning and Z-index</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Google Chrome, Internet, & a text editor</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">Label two of California's major cities with positioning!</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+				
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for assets/images -->
+				<p>Through this handson, you will learn important positioning properties.  You will also learn how to use z-index.</p>
+				<p>Right now, you should have something like this:</p>
+				<img src="assets/images/starter.jpg">
+				<br>
+				<br>
+				<div class = "body-header">Step 1: Align the Labels</div>
+				<p>Align the labels so that the name of the city is next to a pin.  In the <em>name</em> class and in the <em>pin</em> class:
+				<ul>
+					<li>set <em>float: 'left'</em>
+				</ul>
+				</p>
+				
+				<div class = "body-header">Step 2: Pin the Cities</div>
+				<p>If you look closely at your starter file, you'll notice that the <em>left</em> and <em>top</em> properties in your #la-container and your #sf-container have already been filled out.  However, it doesn't seem like these containers are in the right place.  This is because the <em>position</em> property within these two containers is still 'static' (by default) and so the positioning properties have no effect.  To fix this, add:
+				<ul>
+				<li><em>position: 'absolute'</em> to #la-container and #sf-container
+				</li>
+				</ul>
+				</p>
+				<div class = "body-header">Step 3: Get the Details</div>
+				<p>Now all the locations should be marked.  However, the text and the pins are way too close together and the text is split into two lines.  Fix this by adding:
+				<ul>
+				<li><em>position: 'absolute'</em> in the .name class, and
+				</li>
+				<li>specify the dimensions in the .label-container class (<em>height: '40px'; width: '500px')</em></li>
+				</ul> 
+				</p>
+				<div class = "body-header">Step 4: Cover the Tree</div>
+				<p>Right now, a huge tree is covering our text.  Fix that by changing the z-index of the tree.
+				<ul>
+					<li><em>z-index: "-1"</em> in #tree</li>
+				</ul>
+				</p>
+				<div class = "body-header">Finishing Thoughts</div>
+				<p>Your page should now look like this!</p>
+				<img src="assets/images/finish.jpg"
+			</div>
+		</div>
+	</div>
+</body>
+</html>

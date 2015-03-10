@@ -1,0 +1,150 @@
+<html> 
+<head>
+    <title>WDD | Hands-on 6</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="images/logo.png" /></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Hands-on 6</div>
+				<!-- DUE DATE -->
+				<div id="header-due">Spring 2015</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">CSS 3</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Google Chrome &amp; Code Editor</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">Explore CSS3 features such as browser specifity, transform, and transition.</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Overview</div>
+				<!-- CONTENT -->
+				
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for images -->
+				<p>Before we begin, make sure you have the starter code. You should see index.html and style.css. If not, copy the code <a href="http://jsfiddle.net/e6qtvqs2/">here</a>. Open both in your text editor. You should see something like this:</p>
+				<img src="images/2.png"/>
+				<br>
+				<br>
+				<div class = "body-header">Positioning Elements</div>
+				<p>Here's our goal: To shift the <b>Night</b> div to the right side, give unique styles to <b>Day</b> and <b>Night</b>, fix our Social Media buttons, and move the top-left white square to the center (and make it look like an arrow). When we are done, hovering over the <b>Night</b> panel will animate the panel and stretch it across the screen. 
+				<br>
+				<br>
+				First, let's fix <i>#night</i>. Notice it is already a <b class="code">position:fixed</b> element. Any non-static position will allow us to use offset values, like top, right, bottom, and left. Add <b class="code">right:0</b> to styles. Now, if you refresh your page, it should look like this:</p>
+
+				<img src="images/3.png"/>
+
+				<p>Next, let's fix the ugly white box at the top-left corner of night. Let's turn it into an arrow. First find <i>#night #arrow</i> and add the following CSS properties:
+				<p class="code">
+					#night #arrow { <br><b>
+					&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;background-color: #222;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;transform: rotate(45deg);<br> 
+					&nbsp;&nbsp;&nbsp;&nbsp;-moz-transform: rotate(45deg);<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transform: rotate(45deg);<br></b>
+					}
+				</p>
+				Remember that CSS3 properties need to come in <b>threes</b>. This includes the regular transform, the webkit transform, and the moz transform. Now, your page should look like this:</p><br>
+				<img src="images/4.png"/>
+
+				<p>Notice our box is rotated and positioned at the top. Also, notice that the box takes up space, causing our <b>Night</b> panel to be positioned slightly lower than the <b>Day</b> panel. This fix requires us to use <b>position: absolute</b> to pull the rotated box out of the flow of the page, and then shifting this box in relation to the <b>Night</b> panel. Because the <b>Night</b> panel
+				is already <b>position: fixed</b>, if the rotated box (within the Night panel) is position: absolute, it will move <i>relative</i> to the Night panel.
+				<br>
+				Thus, let's add the following styles to <i>#night #arrow:</i>
+				<p class="code">
+					#night #arrow { <br><b>
+					&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;top: 50%;<br> 
+					&nbsp;&nbsp;&nbsp;&nbsp;margin-left: -25px;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;margin-top: -25px;<br></b>
+					}
+				</p>
+				<p>Why did we shift the box down 50% from the top, and shift it more with margins?<br> Shifting the rotated box down 50% only aligns the top of the rotated box to 50% the height of the Night panel. It <b>does not</b> shift the <b>center</b> of the rotated box to 50%. So, we must shift the box half of its height and width (to the top and left) to center the box. This is how you would center a div <i>vertically</i> on the page.<br>
+				Thus, we get this:<br>
+				</p>
+				<img src="images/5.png"/>
+				<br><br>
+				<div class = "body-header">Social Media Buttons</div>
+				<p>Notice that the social media buttons are stacked vertically. Let's make them inline with each other. I'll use <b class="code">display: inline-block;</b>. Floating left also works.</p>
+				<p> Remember that with <b class="code">display: inline-block</b>, our Social Media buttons will be beside each other, except there is a slight gap between each item. This is because div elements always add a bit of margin above and below elements (or in the case of inline-blocks, to the left and right of elements). Floats will not have this problem (but we won't use floats for this example, since we want our menu centered).
+				</p>
+				Find <i>.social .item</i> in the CSS stylesheet, and let's first add the inline-block property, as well as a fix for the menu gap problem:
+				<p class="code">
+					.social .item { <br><b>
+					&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br> 
+					&nbsp;&nbsp;&nbsp;&nbsp;margin-left: -5px;<br></b>
+					}
+				</p>
+				<p>Wonderful! Our page is looking much nicer. Except...what is up with <b>Night</b> panel's text color?
+				</p>
+				<div class = "body-header">Color and Hover</div>
+				<p>Notice that in the CSS file, <b>Day</b> and <b>Night</b> both share similar elements in the same classes.
+				<p>However, both panels won't have similar <b>text</b> color. In order to fix this, first put all similar styles for the class, and then style individual css rules to override the common ones.</p>
+				<p>So, find <i>#night</i> and add <b class="code">color: white;</b></p>
+				</p>
+				<img src="images/7.png"/>
+				<p> Nice. <b>Night</b> now stands out.
+				</p>
+				<p>Next, we will apply CSS3 styles to make our elements look slick. First, let's dim down the opacity of the menu items, and as we hover over each item, we will change the opacity to 1. This will give it a nice, subtle effect to your page. </p>
+				<p>Find <i>#day .menu .item</i> and add <b class="code">opacity: 0.4;</b></p>
+				<p>Same for <b>Night</b>. Find <i>#night .menu .item</i> and add <b class="code">opacity: 0.2;</b></p>
+				<p> Although both menus have the same structure, we made the <b>Night</b> panel have a fainter text color than <b>Day</b> purely because it looks nicer on black.</p>
+				<p>
+				Next, find <i>#day .menu .item:hover, #night .menu .item:hover</i>, and add <b class="code">opacity: 1;</b>
+				</p>
+				<p>This <b>hover</b> effect will affect both <b>Day and Night</b>, because of the comma separating the two styles. If you now open up <i>css3.html</i>, and hover over the menu items, you will see a nice opacity change.
+				</p>
+				<div class = "body-header">Transitions</div><br>
+				<img src="images/8.png"/>
+				<p>However, the change from opacity 0.4 or 0.2 to 1 is so sudden. To smoothen out the <b>transition</b>, let's add the CSS3 property <b>transition</b>, which applies to <i>.menu .item</i> (since this transition affects both <b>Day</b> and <b>Night</b>)
+				Find <i>.menu .item</i>, and add the trio of styles for transition:</p>
+				<p class="code">
+					.menu .item { <br><b>
+					&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;transition: 0.3s;<br> 
+					&nbsp;&nbsp;&nbsp;&nbsp;-moz-transition: 0.3s;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transition: 0.3s;<br></b>
+					}
+				</p>
+				<p>Last, let's add the hover effect on the <b>Night</b> panel. If you hover over the <b>Night</b> panel, its width should be 97%.
+				Find <i>#night:hover</i> and add <b class="code">width: 97%;</b></p>
+				And again, to smoothen the transition, let's add the styles for <b>transition</b> under the #night element:</p>
+
+				<p class="code">
+					#night { <br><b>
+					&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;transition: 0.7s;<br> 
+					&nbsp;&nbsp;&nbsp;&nbsp;-moz-transition: 0.7s;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transition: 0.7s;<br></b>
+					}
+				</p>
+
+				<img src="images/9.png"/>
+				<p>And there you go! :)</p>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
